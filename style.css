@@ -1,0 +1,427 @@
+/* 
+Theme Name: Arch Move 
+*/
+
+@font-face {
+    font-family: "NewYorkExtraLarge";
+    src: url("./../assets/fonts/NewYorkExtraLargeBold.otf") format("woff2");
+}
+@font-face {
+    font-family: "SFUIDisplayLight";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./../assets/fonts/SFUIDisplay-Light.woff") format("woff2");
+}
+@font-face {
+    font-family: "SFUIDisplayRegular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./../assets/fonts/SFUIDisplay-Regular.woff") format("woff2");
+}
+@font-face {
+    font-family: "SFUIDisplaySemibold";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./../assets/fonts/SFUIDisplay-Semibold.woff") format("woff2");
+}
+@font-face {
+    font-family: "SFUIDisplayBold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./../assets/fonts/SFUIDisplay-Bold.woff") format("woff2");
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    font-family: "SFUIDisplayRegular", serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+}
+
+h1, h2 {
+    font-family: "NewYorkExtraLarge", serif;
+}
+
+.header {
+    height: 96px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #585858;
+}
+
+.header__navigation {
+    display: flex;
+}
+
+.header__logo {
+    margin-right: 38px;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__list-item,
+.header__btn {
+    padding: 0 24px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+.header__autorization {
+    display: flex;
+}
+
+.header__btn--sign-in {
+    margin-left: 24px;
+    margin-right: 16px;
+}
+
+.header__btn--sign-in:hover {
+    color: #FD665E;
+}
+
+.header__btn--sign-up {
+    background-color: #FD665E;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.header__btn--sign-up:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+}
+
+.main {
+    padding: 48px 0;
+}
+
+.main__title {
+    font-size: 112px;
+    line-height: 100%;
+    max-width: 870px;
+    letter-spacing: -0.04em;
+    margin-bottom: 47px;
+}
+
+.main__title span {
+    color: #FD665E;
+}
+
+.main__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__text {
+    max-width: 290px;
+    margin-bottom: 48px;
+}
+
+.btn {
+    padding: 0 32px;
+    height: 56px;
+    background: #FD665E;
+    border-radius: 4px;
+    letter-spacing: 0.01em;
+    font-family: "SFUIDisplaySemibold", serif;
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.main__img {
+    width: 765px;
+    height: 480px; 
+    object-fit: cover;
+}
+
+.gallery, 
+.features,
+.reviews-top,
+.reviews-bottom,
+.partners {
+    padding: 64px 0;
+}
+
+.gallery__title {
+    margin: 0 auto 40px;
+    max-width: 535px;
+    text-align: center;
+}
+
+.gallery-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 432px;
+    gap: 45px;
+}
+
+.gallery__img, 
+.gallery__link {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery__link {
+    position: relative;
+}
+
+.gallery__link:hover::after,
+.gallery__link:hover::before {
+    content: "";
+    position: absolute;
+}
+
+.gallery__link:hover::before {
+    background-image: url('./../assets/images/ic-searhc-big.svg');
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.gallery__link:hover::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.4);
+}
+
+.gallery__img {
+    object-fit: cover;
+}
+
+.features__title {
+    max-width: 460px;
+    margin-bottom: 40px;
+}
+
+.features__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features__img {
+    min-width: 535px;
+    height: 610px;
+    object-fit: cover;
+}
+
+.features__wrapper {
+    max-width: 390px;
+    width: 100%;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.features__icon-box {
+    min-width: 48px;
+    text-align: center;
+}
+
+.feature__info{
+    margin-left: 38px;
+}
+
+.feature__title {
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    font-family: "SFUIDisplayBold", serif;
+    margin-bottom: 8px;
+}
+
+.features__btn {
+    margin-left: 86px;
+}
+
+.reviews {
+    background-image: url("./../assets/images/background.png");
+    background-size: cover;
+}
+
+.reviews-top {
+    display: flex;
+    flex-direction: column;
+    min-height: 588px;
+}
+
+.reviews-top__title {
+    max-width: 375px;
+    margin-bottom: 40px;
+}
+
+.reviews-slider {
+    align-self: flex-end;
+    max-width: 765px;
+}
+
+.reviews-slider::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 40px;
+    background-image: url("./../assets/images/img.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -110px;
+}
+
+.review__text {
+    font-size: 32px;
+    font-family: "SFUIDisplayLight", serif;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    max-width: 765px;
+    margin-bottom: 60px;
+}
+
+.review__author {
+    margin-bottom: 11px;
+}
+
+.review__author-name {
+    font-family: "SFUIDisplayBold", serif;
+}
+.slick-slider {
+    position: relative;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+}
+.slick-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+
+}
+
+.slick-next::before,
+.slick-prev:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-next {
+    background: rgba(0, 0, 0, 0.03);
+    right: 0;
+}
+
+.slick-next::before {
+    background-image: url("./../assets/images/arrow-next.svg");
+}
+
+.slick-prev {
+    right: 56px;
+}
+
+.slick-prev:before {
+    background-image: url("./../assets/images/arrow-prev.svg");
+}
+
+.slick-prev:hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.reviews-bottom {
+    min-height: 812px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews__img {
+    width: 497px;
+    height: 684px;
+    object-fit: cover;
+    transform: translateX(-45px);
+}
+
+.reviews-inner {
+    max-width: 535px;
+}
+
+.reviews-bottom__title {
+    margin-bottom: 64px;
+}
+
+.reviews-bottom__title span {
+    color: #FD665E;
+}
+
+.partners {
+    min-height: 340px;
+}
+
+.partners__title  {
+    margin-bottom: 56px;
+}
+
+.partners__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    font-size: 12px;
+    font-family: "SFUIDisplaySemibold", serif;
+    border-top: 1px solid #F0F0F0;
+} 
+
+.footer__inner {
+    min-height: 208px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav {
+    margin-left: -24px;
+}
+
