@@ -4,31 +4,31 @@ Theme Name: Arch Move
 
 @font-face {
     font-family: "NewYorkExtraLarge";
-    src: url("./../assets/fonts/NewYorkExtraLargeBold.otf") format("woff2");
+    src: url("./assets/fonts/NewYorkExtraLargeBold.otf") format("woff2");
 }
 @font-face {
     font-family: "SFUIDisplayLight";
     font-style: normal;
     font-weight: 300;
-    src: url("./../assets/fonts/SFUIDisplay-Light.woff") format("woff2");
+    src: url("./assets/fonts/SFUIDisplay-Light.woff") format("woff2");
 }
 @font-face {
     font-family: "SFUIDisplayRegular";
     font-style: normal;
     font-weight: 400;
-    src: url("./../assets/fonts/SFUIDisplay-Regular.woff") format("woff2");
+    src: url("./assets/fonts/SFUIDisplay-Regular.woff") format("woff2");
 }
 @font-face {
     font-family: "SFUIDisplaySemibold";
     font-style: normal;
     font-weight: 600;
-    src: url("./../assets/fonts/SFUIDisplay-Semibold.woff") format("woff2");
+    src: url("./assets/fonts/SFUIDisplay-Semibold.woff") format("woff2");
 }
 @font-face {
     font-family: "SFUIDisplayBold";
     font-style: normal;
     font-weight: 700;
-    src: url("./../assets/fonts/SFUIDisplay-Bold.woff") format("woff2");
+    src: url("./assets/fonts/SFUIDisplay-Bold.woff") format("woff2");
 }
 
 *:focus {
@@ -46,6 +46,10 @@ body {
 
 h1, h2 {
     font-family: "NewYorkExtraLarge", serif;
+}
+
+a{
+    text-decoration: none;
 }
 
 .header {
@@ -198,10 +202,10 @@ h1, h2 {
 }
 
 .gallery__link:hover::before {
-    background-image: url('./../assets/images/ic-searhc-big.svg');
+    background-image: url('./assets/images/ic-searhc-big.svg');
     top: 50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%);
     z-index: 1;
     width: 30px;
     height: 30px;
@@ -269,7 +273,7 @@ h1, h2 {
 }
 
 .reviews {
-    background-image: url("./../assets/images/background.png");
+    background-image: url("./assets/images/background.png");
     background-size: cover;
 }
 
@@ -294,7 +298,7 @@ h1, h2 {
     position: absolute;
     width: 58px;
     height: 40px;
-    background-image: url("./../assets/images/img.svg");
+    background-image: url("./assets/images/img.svg");
     background-size: contain;
     background-repeat: no-repeat;
     left: -110px;
@@ -353,7 +357,7 @@ h1, h2 {
 }
 
 .slick-next::before {
-    background-image: url("./../assets/images/arrow-next.svg");
+    background-image: url("./assets/images/arrow-next.svg");
 }
 
 .slick-prev {
@@ -361,7 +365,7 @@ h1, h2 {
 }
 
 .slick-prev:before {
-    background-image: url("./../assets/images/arrow-prev.svg");
+    background-image: url("./assets/images/arrow-prev.svg");
 }
 
 .slick-prev:hover {
