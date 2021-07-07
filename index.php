@@ -2,23 +2,19 @@
 
     <section class="main">
         <div class="container">
-            <h1 class="main__title">Build Your Dream <span>House</span></h1>
+            <h1 class="main__title"><?php the_field('main__title'); ?><span> <?php the_field('accent__word'); ?></span></h1>
             <div class="main__inner">
                 <div class="main__wrapper">
-                    <p class="main__text">
-                        The first and most trusted marketplace of design &
-                        build house in The World. 100% guaranteed Build safe,
-                        comfortable and transparent with a project management for the best result
-                    </p>
+                    <p class="main__text"><?php the_field('main__text'); ?></p>
                     <button class="btn main__btn">Free Consultation </button>
                 </div>
                 <!-- <div class="main__img"></div> -->
-                <img class="main__img" src="<?php echo IMG_DIR; ?>/main-img.png" alt="">
+                <img class="main__img" src="<?php the_field('main__img'); ?>" alt="">
             </div>
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="gallery__title title">Build professional valuable room for you</h2>
             <div class="gallery-inner">
@@ -38,50 +34,33 @@
         </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <h2 class="features__title title">Build your needs with Archmove</h2>
             <div class="features__inner">
                 <img src="<?php echo IMG_DIR; ?>/img-6.png" alt="" class="features__img">
                 <div class="features__wrapper">
 
-                    <div class="features__feature feature">
-                        <div class="features__icon-box">
-                            <img class="features__icon" src="<?php echo IMG_DIR; ?>/icon-1.svg" alt="">
+                    <?php foreach (getFeatures() as $feature): ?>
+                        <div class="features__feature feature">
+                            <div class="features__icon-box">
+                                <img class="features__icon" src="<?php echo $feature['img'] ?>" alt="">
+                            </div>
+                            <div class="feature__info">
+                                <h3 class="feature__title"><?php echo $feature['title'] ?></h3>
+                                <p class="feature__text"><?php echo $feature['text'] ?></p>
+                                <i><?php echo $feature['add_text'] ?></i>
+                            </div>
                         </div>
-                        <div class="feature__info">
-                            <h3 class="feature__title">100% guaranteed project completion</h3>
-                            <p class="feature__text">Build safe, comfortable and transparent with a project management
-                                application with a joint account.</p>
-                        </div>
-                    </div>
-                    <div class="features__feature feature">
-                        <div class="features__icon-box">
-                            <img class="feature__icon" src="<?php echo IMG_DIR; ?>/icon-2.svg" alt="">
-                        </div>
-                        <div class="feature__info">
-                            <h3 class="feature__title">No additional fees</h3>
-                            <p class="feature__text">There are no hidden costs. The value of the offer you get is the
-                                value you paid.</p>
-                        </div>
-                    </div>
-                    <div class="features__feature feature">
-                        <div class="features__icon-box">
-                            <img class="feature__icon" src="<?php echo IMG_DIR; ?>/icon-3.svg" alt="">
-                        </div>
-                        <div class="feature__info">
-                            <h3 class="feature__title">Get escort from the Team</h3>
-                            <p class="feature__text">Monitor reports from the Arsitag team who check directly in the
-                                field.</p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+
                     <button class="features__btn btn">FREE CONSULTATION</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <div class="reviews-top">
                 <h2 class="reviews-top__title title">Sound Too Good To Be True?</h2>
@@ -127,7 +106,7 @@
             </div>
         </div>
     </section>
-    <section class="partners">
+    <section class="partners" id="partners">
         <div class="container">
             <div class="partners__inner">
                 <h2 class="partners__title title">Our Partners</h2>
